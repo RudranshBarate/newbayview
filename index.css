@@ -1,0 +1,323 @@
+body {
+    font-family: 'Forum';
+}
+
+.item1 {
+    margin: 60px;
+}
+
+.item2 {
+    margin: 60px;
+}
+
+.item3 {
+    margin: 60px;
+}
+
+.item4 {
+    margin: 60px;
+    margin-bottom: 5px;
+}
+
+.item5 {
+    margin: 60px;
+
+
+}
+
+.item6 {
+    margin: 60px;
+    margin-bottom: 20px;
+    margin-right: 300px;
+}
+
+.item7 {
+    margin: 60px;
+}
+
+.item8 {
+    margin: 60px;
+}
+
+.item9 {
+    margin: 60px;
+}
+
+.item10 {
+    margin: 60px;
+}
+
+.mockup-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 246px;
+    height: 503px;
+    mix-blend-mode: normal;
+}
+
+.untitled-design-26-1 {
+
+    top: 6px;
+    left: 5px;
+    border-radius: 39px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.made-by-love {
+    position: absolute;
+    top: 570px;
+    left: 55px;
+    font-family: Forum;
+    display: inline-block;
+    /* width: 151px; */
+    text-shadow: 0 4px 4px rgba(255, 92, 0, 0.12);
+    -webkit-text-stroke: 6px transparent;
+    mix-blend-mode: hard-light;
+}
+
+.untitled-design-23-removebg-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 60px;
+    height: 70px;
+    object-fit: cover;
+    mix-blend-mode: darken;
+    margin-right: 100px;
+}
+
+.frame-child {
+    position: absolute;
+    top: 149px;
+    left: 77px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 104px;
+    height: 52.97px;
+}
+
+.breakfast {
+    position: absolute;
+    top: 165.03px;
+    left: 83px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-0.02deg);
+    transform-origin: 0 0;
+}
+
+.frame-item {
+    position: absolute;
+    top: 230px;
+    left: 77px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 104px;
+    height: 52.97px;
+}
+
+.food {
+    position: absolute;
+    top: 245.03px;
+    left: 82px;
+    font-size: 17px;
+    color: #fff;
+    display: inline-block;
+    width: 88.08px;
+    height: 13.52px;
+    transform: rotate(-0.02deg);
+    transform-origin: 0 0;
+}
+
+.frame-inner {
+    position: absolute;
+    top: 311px;
+    left: 77px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 104px;
+    height: 52.97px;
+}
+
+.drinks {
+    position: absolute;
+    top: 327.03px;
+    left: 82px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    width: 88.08px;
+    height: 13.52px;
+    transform: rotate(-0.02deg);
+    transform-origin: 0 0;
+}
+
+.bayviewcafecolaba,
+.follow-us-on {
+    position: absolute;
+    transform: rotate(-0.03deg);
+    transform-origin: 0 0;
+}
+
+.follow-us-on {
+    top: 430.05px;
+    left: 80px;
+    font-size: 18px;
+}
+
+.bayviewcafecolaba {
+    top: 467.06px;
+    left: 72px;
+    font-size: 12;
+}
+
+
+.lilac-and-white-traditional-re {
+    position: absolute;
+    top: 472px;
+    left: 55px;
+    width: 13px;
+    height: 14px;
+    object-fit: cover;
+}
+
+
+
+
+.lilac-and-white-traditional-re1 {
+    position: absolute;
+    top: 415px;
+    left: 55px;
+    width: 13px;
+    height: 14px;
+    object-fit: cover;
+}
+
+.lilac-and-white-traditional-re1 {
+    top: 494px;
+    left: 70px;
+    width: 14px;
+    height: 16px;
+}
+
+.bayview-cafe {
+    position: absolute;
+    top: 490.04px;
+    left: 72px;
+    transform: rotate(-0.03deg);
+    transform-origin: 0 0;
+}
+
+.untitled-design-19-1 {
+    position: absolute;
+    top: -13px;
+    left: 280px;
+    width: 95px;
+    height: 115px;
+    object-fit: cover;
+}
+
+.mockup-parent {
+    position: relative;
+    width: 100%;
+    height: 503px;
+    text-align: center;
+    font-size: 10px;
+    color: #000;
+    font-family: "Montserrat Alternates";
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-links .items {
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background: url(public/2.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 69%;
+    
+    
+
+}
+
+@media (min-width:400px) {
+    .frame-child {
+        left: 70px;
+        width: 160px;
+        height: 70px;
+    }
+
+    .frame-item {
+        /* left: 90px;
+        width: 150px;
+        height: 60px; */
+        left: 70px;
+        width: 160px;
+        height: 70px;
+    }
+
+    .frame-inner {
+        /* left: 90px;
+        width: 150px;
+        height: 60px; */
+        left: 70px;
+        width: 160px;
+        height: 70px;
+
+    }
+
+    .follow-us-on {
+        left: 100px
+    }
+
+    .bayviewcafecolaba {
+        top: 470px;
+        left: 100px;
+    }
+
+    .lilac-and-white-traditional-re {
+        top: 477px;
+        left: 80px;
+    }
+
+    .lilac-and-white-traditional-re1 {
+        top: 495px;
+        left: 94px;
+    }
+
+    .bayview-cafe {
+        left: 94px;
+    }
+
+    .untitled-design-19-1 {
+        left: 300px;
+    }
+
+    .made-by-love {
+        top: 650px;
+        left: 73px;
+    }
+    .untitled-design-19-1{
+        left: 315px;
+    }
+}

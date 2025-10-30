@@ -1,0 +1,355 @@
+/* --- Basic Setup --- */
+/* --- Basic Setup --- */
+/* --- 1. DEFINE THE FLOAT ANIMATION --- */
+/* This creates the "bobbing" keyframes */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    /* Moves the item 8px up */
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* --- 2. APPLY THE ANIMATION TO ALL FOOD ITEMS --- */
+/* Find your existing .food-item rule and add the 'animation' line */
+.food-item {
+  position: absolute;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+
+  /* --- ADD THIS LINE --- */
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* --- 3. (OPTIONAL, BUT RECOMMENDED) STAGGER THE ANIMATIONS --- */
+/* This makes them float at different times, which looks more natural.
+   If you don't add this, they will all float up and down at the exact same time. */
+
+#food-pizza {
+  animation-delay: 0s;
+}
+#food-dessert {
+  animation-delay: 0.5s;
+}
+#food-platter {
+  animation-delay: 0.2s;
+}
+#food-paneer-right {
+  animation-delay: 0.7s;
+}
+#food-wrap-left {
+  animation-delay: 0.3s;
+}
+#food-salad {
+  animation-delay: 0.1s;
+}
+#food-soup {
+  animation-delay: 0.6s;
+}
+#food-paneer-bottom {
+  animation-delay: 0.4s;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  /* FIX: Remove margin, padding, and background color */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Or any color you want behind the card */
+}
+/* --- Main Menu Container --- */
+.menu-container {
+  /* --- RESPONSIVE SCALING --- */
+  width: 100%; /* Fill the screen */
+  max-width: 420px; /* But don't get bigger than 420px */
+  min-height: 100vh; /* Let aspect-ratio control height */
+  aspect-ratio: 400 / 850; /* CRITICAL: Maintains the exact shape */
+  max-height: 95vh; /* Failsafe for very short/wide screens */
+
+  /* --- RESPONSIVE FONT --- */
+  /* Scales text smoothly: min 14.4px, preferred 4.5vw, max 18px */
+  font-size: clamp(14.4px, 4.5vw, 18px);
+
+  /* --- Original Styles --- */
+  position: relative; /* CRITICAL: Allows absolute positioning inside */
+  background-image: url("public/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* CRITICAL: Clips the food images */
+}
+
+/* --- 1. Logos (in %) --- */
+.logo-bayview {
+  top: 1%;
+  position: absolute;
+
+  left: 3%; /* 30px / 400px */
+  width: 17.5%; /* 70px / 400px */
+}
+
+.logo-hotel {
+  top: -1%;
+  position: absolute;
+  right: 1%;
+  width: 30%; /* increased from 14% */
+}
+
+/* --- 2. Food Items (in %) --- */
+/* All positions and sizes are converted to % to scale with the container */
+.food-item {
+  position: absolute;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* --- Food Items (Responsive Positions & Sizes in %) --- */
+#food-pizza {
+  top: 7.4%; /* 80px / 850px */
+  left: -12.5%; /* -50px / 400px */
+  width: 55%; /* 220px / 400px */
+}
+
+#food-dessert {
+  top: 16.5%; /* 140px / 850px */
+  right: -10%; /* -40px / 400px */
+  width: 40%; /* 160px / 400px */
+}
+
+#food-platter {
+  top: 37.6%; /* 320px / 850px */
+  left: -15%; /* -60px / 400px */
+  width: 47.5%; /* 190px / 400px */
+}
+
+#food-paneer-right {
+  top: 40%; /* 340px / 850px */
+  right: -17.5%; /* -70px / 400px */
+  width: 52.5%; /* 210px / 400px */
+}
+
+#food-wrap-left {
+  top: 50%; /* 510px / 850px */
+  left: -15%; /* -80px / 400px */
+  width: 57.5%; /* 230px / 400px */
+}
+
+#food-salad {
+  top: 52%; /* 540px / 850px */
+  /* -60px / 400px */
+  width: 52.5%; /* 210px / 400px */
+}
+
+#food-soup {
+  bottom: 6%; /* 50px / 850px */
+  left: -12.5%; /* -50px / 400px */
+  width: 47.5%; /* 190px / 400px */
+}
+
+#food-paneer-bottom {
+  bottom: 4.7%; /* 40px / 850px */
+  right: -15%; /* -60px / 400px */
+  width: 52.5%; /* 210px / 400px */
+}
+
+/* --- Responsive Fix: Prevent Overlap on Mobile --- */
+@media (max-width: 768px) {
+  #food-pizza {
+    top: 6%;
+    left: -5%;
+    width: 45%;
+  }
+
+  #food-dessert {
+    top: 10%;
+    right: -4%;
+    width: 35%;
+  }
+
+  #food-platter {
+    top: 34%;
+    left: -6%;
+    width: 42%;
+  }
+
+  #food-paneer-right {
+    top: 30%;
+    right: -12%;
+
+    width: 45%;
+  }
+
+  #food-wrap-left {
+    top: 50%; /* 510px / 850px */
+    left: -15%;
+    width: 50%;
+  }
+
+  #food-salad {
+    top: 50%;
+    right: -15%;
+    width: 48%;
+  }
+
+  #food-soup {
+    bottom: 6%;
+    left: -6%;
+    width: 42%;
+  }
+
+  #food-paneer-bottom {
+    bottom: 4%;
+    right: -8%;
+    width: 45%;
+  }
+}
+
+/* --- 3. Center Buttons (in % and em) --- */
+.menu-buttons {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  width: 45%; /* 180px / 400px */
+  gap: 0.8em; /* 15px / 18px base font */
+}
+
+.menu-btn {
+  background-color: #6a737b;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em; /* Scales with container font-size */
+  letter-spacing: 0.1em;
+  padding: 0.7em 1.1em; /* 12px & 20px / 18px base */
+  border-radius: 0.4em; /* 8px / 18px base */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+  background-color: #525960;
+  transform: translateY(-2px);
+}
+
+/* --- 4. Social Links (in % and em) --- */
+.social-links {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: #444;
+}
+
+.social-links p {
+  font-size: 0.83em; /* 15px / 18px */
+  font-weight: 700;
+  margin-bottom: 0.83em;
+}
+/* --- Find these old rules: --- */
+.social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55em; /* 10px / 18px */
+  margin-bottom: 0.44em; /* 8px / 18px */
+}
+
+.social-item img {
+  width: 1.11em; /* 20px / 18px */
+  height: 1.11em;
+}
+
+.social-item span {
+  font-size: 0.77em; /* 14px / 18px */
+  font-weight: 700;
+  color: #333;
+}
+
+/* --- And replace them with these new rules: --- */
+.social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55em; /* 10px / 18px */
+  margin-bottom: 0.44em; /* 8px / 18px */
+  color: #333; /* This will set the text AND icon color */
+}
+
+.social-item svg {
+  /* <-- This selector changed from 'img' */
+  width: 1.11em;
+  height: 1.11em;
+}
+
+.social-item span {
+  font-size: 0.77em;
+  font-weight: 700;
+  /* We don't need 'color: #333;' anymore, 
+       it's inherited from .social-item */
+}
+.social-container {
+  display: flex;
+  flex-direction: column; /* stack vertically; change to row if you want side by side */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #d9534f; /* subtle red accent on hover */
+}
+
+.social-link:hover svg {
+  transform: scale(1.2);
+  color: #d9534f;
+}
+
+/* --- 5. Footer Text (in % and em) --- */
+.footer-text {
+  position: absolute;
+  bottom: 4.1%; /* 35px / 850px */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #333;
+  width: 100%;
+}
+
+.footer-text p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 0.88em; /* 16px / 18px */
+  letter-spacing: 1px;
+}
+
+.footer-subtitle {
+  font-size: 0.72em; /* 13px / 18px */
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #555;
+}
